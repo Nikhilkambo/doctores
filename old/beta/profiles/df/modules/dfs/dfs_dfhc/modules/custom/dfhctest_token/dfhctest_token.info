@@ -1,0 +1,4 @@
+name = Custom Token for dfhctest
+description = Creates a custom token for profile nodes
+core = 7.x
+package = DFHC Custom

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Call to action feature.
+ */
+
+include_once 'dfhc_call_to_action.features.inc';

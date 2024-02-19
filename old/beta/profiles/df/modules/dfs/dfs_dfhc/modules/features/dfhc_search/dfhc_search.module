@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Search feature.
+ */
+
+include_once 'dfhc_search.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dfhc_search_form_search_api_page_search_form_general_search_alter(&$form, &$form_state) {
+  // For whatever reason, the 'keys_#' changes over time or on reinstalls.
+  // So we look for and replace the first 'keys_#' placeholder value.
+  $keys = array_keys($form);
+  foreach ($keys as $key) {
+    if (strpos($key, 'keys_') === 0) {
+      $form[$key]['#attributes']['placeholder'] = t('Search...');
+      break;
+    }
+  }
+
+}

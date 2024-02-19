@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 2 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+/**********************************************
+* Grid Setup
+**********************************************/
+@media (min-width: 760px) {
+  .panel-display--column-2-reverse {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Sidebars */
+  .column-2-reverse-has-one-sidebar.column-2-reverse-has-sidebar-first .column-2-reverse-region--sidebar-first {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .column-2-reverse-has-one-sidebar.column-2-reverse-has-sidebar-second .column-2-reverse-region--sidebar-second {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .column-2-reverse-has-two-sidebars .column-2-reverse-region--sidebar-first {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 8.47458%;
+    clear: none;
+  }
+  .column-2-reverse-has-two-sidebars .column-2-reverse-region--sidebar-second {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 59.32203%;
+    clear: none;
+  }
+}
+/**
+*Fix layout for editor screen
+*/
+#content #panels-dnd-main {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0;
+}

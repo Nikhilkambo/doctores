@@ -1,0 +1,4 @@
+name = Doctor search exposed filter form alter
+description = Custom module to alter location dropdown in exposed filter.
+core = 7.x
+package = DFHC Custom

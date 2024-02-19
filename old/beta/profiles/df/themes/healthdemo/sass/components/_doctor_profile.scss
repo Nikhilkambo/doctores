@@ -1,0 +1,375 @@
+////Doctor profile node page
+article.node-profile,
+section.pane-node-content {
+  margin:0;
+}
+
+//Top panel
+.group-top-section {
+  @include pie-clearfix;
+  background: url("/profiles/df/modules/dfs/dfs_dfhc/import/images/profile-background-image.jpg") no-repeat;
+  background-size: cover;
+  padding-top:30px;
+  padding-bottom: 20px;
+  //Left side of top panel
+  .profile-top-panel {
+    width: 35%;
+    float: left;
+    .field-name-field-image {
+      margin: 0 auto;
+      width: 310px;
+
+      position: relative;
+      overflow: hidden;
+
+      img {
+        display: inline;
+        margin: 0 auto;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+      }
+    }
+    .field-name-field-webform {
+      width: 180px;
+      height: 50px;
+      margin: 0 auto;
+      a, a:visited {
+        font-weight: bold;
+        font-size: 1.5em;
+        font-style: italic;
+        display: block;
+        line-height: 50px;
+        @include background-image(linear-gradient( to right,#61257d,#8958a0));
+        box-sizing: border-box;
+        text-align: center;
+        color: white;
+        height: 50px;
+        @include background-image(linear-gradient( to right,#61257d,#8958a0));
+        &:hover, &:active {
+          font-weight: bold;
+          text-decoration: none;
+          line-height: 42px;
+          background: white;
+          color: #61257e;
+          border:4px solid #61257d;
+        }
+      }
+    }
+
+  }
+  // Title + fields
+  .group-top-right-section {
+    width: 65%;
+    float: left;
+
+    .group-name {
+      @include pie-clearfix;
+
+      .field-name-field-prefix,
+      .field-name-field-first-name,
+      .field-name-field-last-name {
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 40px;
+        color: #069e9b;
+        float: left;
+        padding-right: 5px;
+      }
+
+    }
+    .field-name-field-suffix {
+      @include pie-clearfix;
+      padding-top: 20px;
+      color: #333333;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 28px;
+    }
+
+    // 3 columns below title
+    .first-column,
+    .second-column,
+    .third-column {
+      font-size: 18px;
+      padding-top: 10px;
+      width: 33%;
+      float: left;
+
+      .field-label-above {
+        padding-top: 20px;
+      }
+
+      .field-label {
+        color: #069e9b;
+        font-weight: bold;
+      }
+      .field-items {
+        color: #5f6d76;
+      }
+    }
+    .second-column {
+      .field-name-field-profile-address {
+        padding-top: 20px;
+
+        .tel {
+          padding-bottom: 20px;
+          color: #5f6d76;
+          abbr {
+            border:none;
+            color: #069e9b;
+            font-weight: bold;
+          }
+          abbr::after {
+           content: "\a";
+            white-space: pre;
+          }
+        }
+      }
+    }
+    .third-column {
+      .field-name-field-locations {
+        .pane-node-field-address {
+          color: #5f6d76;
+          padding-top: 10px;
+          .email,
+          .tel,
+          .tel {
+            display: none;
+          }
+        }
+
+        ///Deal with core theme vertical spacing
+        article {
+          margin: 0;
+          section {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+///Middle panel
+.group-middle-section {
+  background-color: white;
+  padding-top:40px;
+  padding-bottom:60px;
+
+  .field {
+    width: 80%;
+    margin:0 auto;
+    padding-top: 30px;
+  }
+  .field-label {
+    text-align: right;
+    width: 25%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #069e9b;
+    line-height: 18px;
+  }
+  .field-items {
+    padding-top:25px;
+    font-size: 18px;
+    width: 73%;
+    padding-left:10px;
+    p {
+      margin:0;
+      font-size: 18px;
+    }
+  }
+
+  .field-name-body {
+    .field-label {
+      font-size: 40px;
+      padding-top:35px;
+    }
+  }
+  .field-name-field-education- {
+    .field-label {
+      padding-top: 27px;
+    }
+  }
+  .field-name-field-board-memberships- {
+    .field-label {
+      padding-top: 27px;
+    }
+  }
+  .field-name-field-awards-and-accolades-- {
+    .field-label {
+      padding-top:27px;
+    }
+    .field-items {
+      color:#5F6D76;
+    }
+  }
+}
+
+
+
+///News view
+
+section.profile-news {
+  width: 80%;
+  margin:0 auto;
+  padding-bottom: 20px;
+  @include pie-clearfix;
+
+  h2 {
+    font-weight: bold;
+    color: #069e9b;
+    padding-top:30px;
+    font-size: 40px;
+    font-style: normal;
+  }
+  .view-news-and-events {
+    padding-top: 35px;
+    .views-row {
+      padding-bottom: 30px;
+      width: 50%;
+      float: left;
+      @include pie-clearfix;
+
+      .views-field-field-image {
+        padding-right:3%;
+        width: 25%;
+        float: left;
+      }
+      .views-field-title {
+        width: 69%;
+        float: left;
+        a {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: bold;
+          color:#5f6d76;
+
+        }
+      }
+      .views-field-created {
+        width: 69%;
+        float: left;
+        font-size: 16px;
+        color:#5f6d76;
+      }
+
+      .views-field-body {
+        width: 69%;
+        float: left;
+        p {
+          font-size: 16px;
+          color: #5f6d76;
+          margin:0;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  .group-top-section {
+    .profile-top-panel {
+      width: 100%;
+      float: none;
+    }
+    .group-top-right-section {
+      text-align: center;
+      width: 100%;
+      float: none;
+
+      .group-name {
+        @include pie-clearfix;
+
+        .field-name-field-prefix,
+        .field-name-field-first-name,
+        .field-name-field-last-name {
+          float:none;
+        }
+      }
+
+
+      .first-column,
+      .second-column,
+      .third-column {
+        width: 100%;
+        float: none;
+      }
+      .second-column {
+        .field-name-field-profile-address {
+          padding-top: 20px;
+
+          .tel {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+  .group-middle-section{
+    .field {
+      width: 100%;
+      .field-label {
+        text-align: center;
+        width:100%;
+      }
+      .field-items {
+        width:100%;
+      }
+    }
+  }
+  section.profile-news {
+    width: 100%;
+    h2 {
+      font-size: 28px;
+      text-align: center;
+    }
+    .view-news-and-events {
+      .views-row{
+        width: 100%;
+
+        .views-field-field-image,
+        .views-field-title,
+        .views-field-created,
+        .views-field-body {
+          width:80%;
+          padding-left: 10%;
+
+        }
+      }
+    }
+  }
+}
+@include breakpoint($tablet-bp) {
+  section.profile-news {
+    .view-news-and-events {
+      .views-row {
+        .views-field-title {
+          a {
+            font-size: 16px;
+          }
+        }
+        .views-field-created {
+          font-size: 14px;
+          line-height:18px;
+        }
+        .views-field-body {
+          p {
+            line-height:17px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

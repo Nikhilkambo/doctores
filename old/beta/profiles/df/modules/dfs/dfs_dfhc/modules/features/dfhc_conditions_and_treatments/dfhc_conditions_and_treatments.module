@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Conditions and Treatments feature.
+ */
+
+include_once 'dfhc_conditions_and_treatments.features.inc';

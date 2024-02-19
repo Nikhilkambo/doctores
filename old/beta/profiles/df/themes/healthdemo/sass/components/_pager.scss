@@ -1,0 +1,41 @@
+////////Pagers//////////
+.pager {
+  text-align: center;
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 10px;
+
+  .first {
+    a {
+      display: none;
+    }
+  }
+  .last {
+    a {
+      display: none;
+    }
+  }
+   ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
+   li {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline;
+  }
+
+  .pager-item {
+    a {
+      color: #5f6d76;
+    }
+  }
+
+  .pager-current {
+    padding: 7px 12px;
+    background-color: #5f6d76;
+    color: #ffffff;
+  }
+}

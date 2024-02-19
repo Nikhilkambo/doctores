@@ -1,0 +1,69 @@
+.column-2-complete-region--sidebar-first {
+
+  .conditions-exposed-block {
+    background-color: white;
+
+    h2 {
+      text-align: center;
+      padding-top:20px;
+      padding-bottom:20px;
+    }
+    .views-exposed-form {
+      padding-left: 10px;
+      padding-bottom: 10px;
+
+      //By default all exposed filters are floated left.
+      .views-exposed-widget {
+        padding-top: 20px;
+        float: none;
+        input {
+          border: 1px solid lightgrey;
+          font-size: 16px;
+          color: #5f6d76;
+        }
+      }
+      .views-submit-button {
+        padding-top: 25px;
+        input {
+          @extend button;
+          width: 180px;
+          height: 50px;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}
+
+/*-----Condition view---- */
+.conditions {
+  ul {
+    list-style: none;
+
+    .views-row {
+      box-shadow: -5px -47px 14px -43px lightgrey;
+      margin-right: 10px;
+      margin-bottom:10px;
+      background-color: white;
+      .views-field-title {
+        padding-top: 20px;
+        padding-left: 20px;
+        a {
+          font-weight: bold;
+          font-size: 28px;
+          color: #069e9b;
+          margin: 0;
+          line-height: 28px;
+        }
+      }
+      .views-field-body {
+        width: 70%;
+        padding-bottom:20px;
+        padding-left:20px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

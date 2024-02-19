@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC News feature.
+ */
+
+include_once 'dfhc_news.features.inc';

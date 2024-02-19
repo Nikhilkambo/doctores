@@ -1,0 +1,115 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 2 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+/**********************************************
+* Grid Setup
+**********************************************/
+.column-2-complete-region {
+  *zoom: 1;
+  margin-bottom: 15px;
+  height: auto;
+}
+.column-2-complete-region:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 760px) {
+  .panel-display--column-2-complete {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+  /* Sidebars */
+  .column-2-complete-has-one-sidebar {
+    *zoom: 1;
+  }
+  .column-2-complete-has-one-sidebar:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column-2-complete-has-one-sidebar .column-2-complete-region--header {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .column-2-complete-has-one-sidebar.column-2-complete-has-sidebar-first .column-2-complete-region--sidebar-first {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .column-2-complete-has-one-sidebar.column-2-complete-has-sidebar-second .column-2-complete-region--sidebar-second {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .column-2-complete-has-one-sidebar .column-2-complete-region--cta {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .column-2-complete-has-two-sidebars {
+    *zoom: 1;
+  }
+  .column-2-complete-has-two-sidebars:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column-2-complete-has-two-sidebars .column-2-complete-region--header {
+    float: none;
+    margin-bottom: 0px;
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both;
+  }
+  .column-2-complete-has-two-sidebars .column-2-complete-region--sidebar-first {
+    width: 23.72881%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    margin-right: 0;
+    margin-left: 0px;
+  }
+  .column-2-complete-has-two-sidebars .column-2-complete-region--sidebar-second {
+    width: 74.57627%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  .column-2-complete-has-two-sidebars .column-2-complete-region--cta {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+/**
+*Fix layout for editor screen
+*/
+#content #panels-dnd-main {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0;
+}

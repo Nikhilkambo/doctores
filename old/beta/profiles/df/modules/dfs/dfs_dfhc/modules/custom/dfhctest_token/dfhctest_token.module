@@ -1,0 +1,64 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tristanwellz
+ * Date: 5/20/15
+ * Time: 8:30 AM
+ */
+/**
+ * Implements hook_token_info_alter().
+ */
+function dfhctest_token_token_info_alter(&$data) {
+
+  $data['tokens']['node']['profile_custom_title'] = array(
+    'name' => t('Profile Title'),
+    'description' => t('Profile Title with Medical Prefix and Suffix.'),
+  );
+
+  return $data;
+}
+
+
+/**
+ * Implements hook_tokens().
+ */
+function dfhctest_token_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+  if ($type == 'node' && !empty($data['node'])) {
+    $node = $data['node'];
+    $wrapper = entity_metadata_wrapper('node' , $node);
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'profile_custom_title':
+          if (!empty($node->field_first_name) || !empty($node->field_last_name)) {
+            if($wrapper->field_prefix->value()){
+              $replacements[$original] = $wrapper->field_prefix->value();
+            }
+            else {
+              $replacements[$original] = '';
+            }
+            if($wrapper->field_first_name->value()){
+              $replacements[$original] .= ' ' . $wrapper->field_first_name->value();
+            }
+            else {
+              $replacements[$original] .= '';
+            }
+            if($wrapper->field_last_name->value()){
+              $replacements[$original] .= ' ' . $wrapper->field_last_name->value();
+            }
+            else {
+              $replacements[$original] .= '';
+            }
+            if($wrapper->field_title->value()){
+              $replacements[$original] .= ' ' . $wrapper->field_title->value();
+            }
+            else {
+              $replacements[$original] .= '';
+            }
+          }
+          break;
+      }
+    }
+  }
+  return $replacements;
+}

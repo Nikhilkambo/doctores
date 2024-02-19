@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Profile feature.
+ */
+
+include_once 'dfhc_profile.features.inc';

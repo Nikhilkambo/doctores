@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC slideshow feature.
+ */
+
+include_once 'dfhc_slideshow.features.inc';

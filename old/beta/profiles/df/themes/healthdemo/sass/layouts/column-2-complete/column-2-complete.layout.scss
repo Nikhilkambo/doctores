@@ -1,0 +1,106 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 2 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Set breakpoint values.
+$desk : 760px;
+
+/**********************************************
+* Grid Setup
+**********************************************/
+$grids: 1;
+$grids: add-grid(12 at $desk);
+
+$gutters: 0;
+$gutters: add-gutter(1/4 at $desk);
+
+$gutter-styles: 'split';
+
+
+$vert-spacing-unit: 15px;
+
+.column-2-complete-region {
+  @include pie-clearfix;
+  margin-bottom: $vert-spacing-unit;
+  height: auto;
+}
+
+@include breakpoint($desk, true) {
+  .panel-display--column-2-complete {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+
+  /* Sidebars */
+  // Has one sidebar.
+  .column-2-complete-has-one-sidebar {
+    @include pie-clearfix;
+    //header
+    .column-2-complete-region--header {
+      @include grid-span(12,1);
+    }
+    // Has the first sidebar.
+    &.column-2-complete-has-sidebar-first {
+      .column-2-complete-region--sidebar-first {
+        @include grid-span(12, 1);
+      }
+    }
+    // Has the second sidebar.
+    &.column-2-complete-has-sidebar-second {
+
+      .column-2-complete-region--sidebar-second {
+        @include grid-span(12, 1);
+      }
+    }
+    //Cta
+    .column-2-complete-region--cta {
+      @include grid-span(12, 1)
+    }
+  }
+
+
+  // Has two sidebars.
+  .column-2-complete-has-two-sidebars {
+    @include pie-clearfix;
+
+    .column-2-complete-region--header {
+      float:none;
+      margin-bottom: 0px;
+      @include grid-span(12, 1);
+      clear:both;
+
+    }
+
+    .column-2-complete-region--sidebar-first {
+      @include grid-span(3, 1);
+      margin-right: 0;
+      margin-left:0px;
+    }
+
+    .column-2-complete-region--sidebar-second {
+      @include grid-span(9, 4);
+    }
+    //Cta
+    .column-2-complete-region--cta {
+      @include grid-span(12, 1)
+    }
+  }
+
+}
+
+/**
+*Fix layout for editor screen
+*/
+#content #panels-dnd-main {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }

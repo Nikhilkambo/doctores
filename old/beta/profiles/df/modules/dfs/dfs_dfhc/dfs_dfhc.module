@@ -1,0 +1,90 @@
+<?php
+
+include_once 'dfs_dfhc.features.inc';
+
+/**
+ * Implements hook_migrate_api().
+ */
+function dfs_dfhc_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'DFSDFHCCtaNodes' => array('class_name' => 'DFSDFHCCtaNodes'),
+      'DFSDFHCLocationNodes' => array('class_name' => 'DFSDFHCLocationNodes'),
+      'DFSDFHCDepartmentNodes' => array('class_name' => 'DFSDFHCDepartmentNodes'),
+      'DFSDFHCConditionNodes' => array('class_name' => 'DFSDFHCConditionNodes'),
+      'DFSDFHCNewsNodes' => array('class_name' => 'DFSDFHCNewsNodes'),
+      'DFSDFHCProfileNodes' => array('class_name' => 'DFSDFHCProfileNodes'),
+      'DFSDFHCGenderTerms' => array('class_name' => 'DFSDFHCGenderTerms'),
+      'DFSDFHCLanguageTerms' => array('class_name' => 'DFSDFHCLanguageTerms'),
+      'DFSDFHCTopicTerms' => array('class_name' => 'DFSDFHCTopicTerms'),
+      'DFSDFHCSpecialtiesTerms' => array('class_name' => 'DFSDFHCSpecialtiesTerms'),
+      'DFSDFHCWebformNode' => array('class_name' => 'DFSDFHCWebformNode'),
+      'DFSDFHCWebformComponents' => array('class_name' => 'DFSDFHCWebformComponents'),
+      'DFSDFHCWebformEmails' => array('class_name' => 'DFSDFHCWebformEmails'),
+      'DFSDFHCPatientStoryNodes' => array('class_name' => 'DFSDFHCPatientStoryNodes'),
+      'DFSDFHCPageNodes' => array('class_name' => 'DFSDFHCPageNodes'),
+      'DFSDFHCMenuLinks' => array('class_name' => 'DFSDFHCMenuLinks'),
+      'DFSDFHCSlideshowNodes' => array('class_name' => 'DFSDFHCSlideshowNodes'),
+    ),
+  );
+  return $api;
+}
+
+/**
+ * Implements hook_df_import_alter().
+ */
+function dfs_dfhc_df_import_alter(&$migrations) {
+  return $migrations['dfs_dfhc'] = array(
+    'DFSDFHCSpecialtiesTerms',
+    'DFSDFHCLanguageTerms',
+    'DFSDFHCGenderTerms',
+    'DFSDFHCTopicTerms',
+    'DFSDFHCWebformNode',
+    'DFSDFHCWebformComponents',
+    'DFSDFHCWebformEmails',
+    'DFSDFHCCtaNodes',
+    'DFSDFHCLocationNodes',
+    'DFSDFHCDepartmentNodes',
+    'DFSDFHCConditionNodes',
+    'DFSDFHCProfileNodes',
+    'DFSDFHCNewsNodes',
+    'DFSDFHCPatientStoryNodes',
+    'DFSDFHCPageNodes',
+    'DFSDFHCSlideshowNodes',
+    'DFSDFHCMenuLinks',
+  );
+}
+
+/**
+ * Implements hook_post_features_enable_feature().
+ */
+function dfs_dfhc_post_features_enable_feature($component) {
+  // Log components as they are enabled.
+  $message = "Enabled component @component";
+  $args = array('@component' => $component);
+  watchdog('dfs_dfhc', $message, $args, WATCHDOG_INFO);
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Adjusts the login button and adds the create account link as a button.
+ */
+function dfs_dfhc_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_login_block' || $form_id == 'user_login') {
+    $form['actions']['#weight'] = 5;
+    $form['actions']['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Sign in'),
+      '#weight' => 5,
+    );
+    if (variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)) {
+      $form['signup'] = array(
+        '#markup' => l(t('Create an Account'), 'user/register', array('attributes' => array('class' => 'register'))),
+        '#weight' => 10,
+      );
+    }
+  }
+
+}

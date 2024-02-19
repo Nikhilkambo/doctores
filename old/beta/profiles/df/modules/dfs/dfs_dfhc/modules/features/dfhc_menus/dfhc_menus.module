@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Menus feature.
+ */
+
+include_once 'dfhc_menus.features.inc';

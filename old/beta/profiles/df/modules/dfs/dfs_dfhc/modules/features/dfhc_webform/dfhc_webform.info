@@ -1,0 +1,16 @@
+name = DFHC Webform
+description = DFHC webform panel layout and customizations
+core = 7.x
+package = DFHC
+version = 7.x-1.0
+project = dfhc_webform
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = panelizer
+dependencies[] = strongarm
+features[ctools][] = panelizer:panelizer:1
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[panelizer_defaults][] = node:webform:default
+features[variable][] = panelizer_defaults_node_webform
+features[variable][] = panelizer_node:webform:page_manager_selection

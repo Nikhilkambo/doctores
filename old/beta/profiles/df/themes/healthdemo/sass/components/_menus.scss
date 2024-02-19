@@ -1,0 +1,330 @@
+//*******************************************************************************
+//* Menu Styles
+//******************************************************************************/
+.region-main-menu-block {
+  width: 70%;
+  float: right;
+  @include breakpoint ($phone-bp) {
+    width:50%;
+  }
+  .responsive-menus.responsified {
+  width: 100%;
+  float:right;
+    .toggler {
+      background-color: #069e9b;
+    }
+    .responsive-menus-simple {
+      background-color: #069e9b;
+      .contextual-links-processed {
+        display:none;
+      }
+    }
+
+}
+
+
+  .header-main-menu {
+    margin-top: .714em;
+    margin-bottom: 0;
+
+    .sf-depth-1 {
+      font-size: 1em;
+      list-style: none;
+      font-family: $font-light;
+      font-weight: 500;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: $darkgrey;
+
+    }
+
+    .sf-accordion-toggle {
+      width: 100%;
+      max-width: 485px;
+      height: 30px;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+
+      a {
+        @include chla-hide-text();
+        display: block;
+        width: 40px;
+        height: 30px;
+        margin-right: 15px;
+        // background: image-url('btn-main-menu.jpg');
+        position: relative;
+        float: right;
+        z-index: 100;
+      }
+    }
+    @include breakpoint($desktop-bp) {
+      .sf-clone-parent {
+        display: none;
+      }
+    }
+  }
+}
+u
+
+ul.sf-main-menu {
+  .menu-attach-block-wrapper {
+    .block {
+      position: static;
+      top: 0;
+      width: 100%;
+      background: $drkblue;
+      @include pie-clearfix;
+      a {
+        padding-left: 15px !important;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+ul.sf-main-menu.sf-horizontal {
+  height: 52px;
+  width: 1000px;
+  margin: 0 auto;
+  display: none;
+
+  @include breakpoint($desktop-bp){
+    display: block !important;
+  }
+
+  ul {
+   background: $drkblue;
+  }
+
+  li {
+    span.nolink,
+    a {
+      font-size: 16px;
+      font-family: $vag-font-family-bold;
+      display: block;
+      margin-top: 9px;
+      padding: 9px 18px 18px 18px;
+
+      &:hover {
+        background: $drkblue;
+      }
+    }
+
+    &:hover,
+    &.sfHover {
+      position: static;
+      > ul {
+        position: absolute;
+        left: 0;
+        top: 52px;
+        width: 100%;
+        border-top: 1px solid $whitetext;
+      }
+    }
+  }
+
+  li.main-menu-quick-links {
+    display: none;
+  }
+
+  li.sf-depth-1.menu-attach-block-item.main-menu-search {
+    display: none;
+  }
+
+  li.sf-megamenu-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    float: none;
+
+    span.nolink,
+    a {
+      font-family: $open-sans-family;
+      font-size: 15px;
+      line-height: 25px;
+      padding: 0;
+      padding-left: 30px;
+
+
+      &:hover {
+        background: none;
+        color: $orange;
+      }
+    }
+
+    > ol > li {
+      width: 25%;
+      float: left;
+      min-height: 150px;
+      border-right: 1px solid $whitetext;
+
+      &.last {
+        border: none;
+      }
+
+      > span.nolink,
+      > a {
+
+        font-family: $vag-font-family-bold;
+        font-size: 20px;
+        color: $whitetext;
+        line-height: 32px;
+        padding-top: 24px;
+        margin: 0;
+
+        &:hover {
+          color: $bg-menu-hover;
+        }
+      }
+
+      ol li.last {
+        padding-bottom: 30px;
+      }
+    }
+
+    &.menu-attach-block-parent {
+      > ol > li {
+        width: 23.5%;
+
+        &.menu-attach-block-item {
+          width: 29.5%;
+        }
+      }
+    }
+
+    .sf-megamenu-column {
+      > span.nolink,
+      > a {
+        font-family: $vag-font-family-bold;
+        font-size: 20px;
+        color: $whitetext;
+        line-height: 32px;
+        padding-top: 24px;
+        margin: 0;
+        &:hover {
+          color: $bg-menu-hover;
+        }
+      }
+
+      > a:hover {
+        color: $orange;
+      }
+    }
+
+  }
+
+  a.menu-attach-block-drop-link {
+    display: none;
+    &.dropped ~ .menu-attach-block-wrapper,
+    ~ .menu-attach-block-wrapper {
+      display: block;
+    }
+  }
+
+  .menu-attach-block-wrapper {
+    .block {
+      padding: 16px 16px 25px 16px;
+
+      .views-field-title {
+        padding-top: 15px;
+        font-family: $open-sans-family;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 20px;
+        color: #FFF;
+      }
+
+      .views-field-body {
+        font-family: $open-sans-family;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .views-field-view-node a {
+        @include chla-button($blue, $blue, 0, 95px, 32px);
+      }
+
+    }
+  }
+}
+
+ul.sf-main-menu.sf-accordion {
+  background: $bg-menu-dropdown;
+  margin-top: 20px;
+
+  @include breakpoint($tablet-bp) {
+    margin-top: 37px;
+  }
+
+  li {
+    span.nolink,
+    a {
+      font-family: $vag-font-family-bold;
+      font-size: 18px;
+      display: block;
+      line-height: 24px;
+      padding: 12px 22px;
+      border-bottom: 1px solid $border-menu-item;
+
+      @include breakpoint($tablet-bp) {
+        padding: 9px 33px;
+      }
+    }
+
+    &.main-menu-quick-links {
+      background: $bg-menu-quicklink;
+
+      span.nolink,
+      a {
+        border-bottom: 1px solid $border-menu-item-ql;
+      }
+    }
+
+    &.menuparent {
+      > span.nolink,
+      > a  {
+       // background: image-url('icon-menuparent.png') right 28px center no-repeat;
+      }
+    }
+
+    &.menu-attach-block-item.main-menu-search {
+      display: block;
+    }
+
+    &.sf-expanded {
+      > span.nolink,
+      > a  {
+     //   background: image-url('icon-menuparent-expanded.png') right 28px center no-repeat;
+      }
+    }
+
+    li {
+      span.nolink,
+      a {
+        padding: 12px 26px;
+        font-family: $open-sans-family;
+        font-size: 14px;
+
+        @include breakpoint($tablet-bp) {
+          padding: 9px 37px;
+        }
+      }
+
+      li {
+        span.nolink,
+        a {
+          padding-left: 31px;
+
+          @include breakpoint($tablet-bp) {
+            padding-left: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-attach-block-item {
+    display: none;
+  }
+}

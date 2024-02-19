@@ -1,0 +1,42 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tristanwellz
+ * Date: 7/17/15
+ * Time: 4:36 PM
+ */
+
+/**
+ * Implements hook field formatter info()
+ */
+function dfhc_display_field_field_formatter_info() {
+  return array(
+    'webform_field_text' => array(
+      'label' => t('Contact us'),
+      'field types' => array('entityreference'),
+      'settings' => array(
+        'link' => FALSE,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view, this is used for webforms
+ *  to produce the text Contact and provide the url of the webform.
+ */
+function dfhc_display_field_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $result = array();
+  $settings = $display['settings'];
+
+  switch ($display['type']) {
+    case 'webform_field_text':
+      foreach ($items as $delta => $item) {
+        $webform_entity = entity_load_single('node', $item['target_id']);
+        $uri = 'content/' . str_replace(' ', '-', $webform_entity->title);
+        $result[$delta] = array('#markup' => l('Contact', $uri));
+      }
+      break;
+  }
+  return $result;
+}

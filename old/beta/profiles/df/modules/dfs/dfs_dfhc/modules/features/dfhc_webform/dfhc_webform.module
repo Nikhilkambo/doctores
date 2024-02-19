@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC Webform feature.
+ */
+
+include_once 'dfhc_webform.features.inc';

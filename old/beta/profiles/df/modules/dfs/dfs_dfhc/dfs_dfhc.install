@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * Installation routines for DFS_DFHC feature
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dfs_dfhc_install() {
+  // Enable custom theme on install.
+  theme_enable(array('healthdemo'));
+  variable_set('theme_default', 'healthdemo');
+
+  // Set logo on healthdemo theme.
+  $settings = variable_get('theme_healthdemo_settings', array());
+
+  $settings['logo_path'] = 'profiles/df/modules/dfs/dfs_dfhc/import/images/baypoint_logo.png';
+
+  variable_set('theme_healthdemo_settings', $settings);
+
+  // Set DFS DFHC Home as the default homepage on install.
+  variable_set('site_frontpage', 'dfhchomepage');
+
+  // Set compact form ids.
+  variable_set('compact_forms_ids', 'views-exposed-form-Glossary-Search-page-1
+views-exposed-form-departments-and-services-page
+views-exposed-form-Glossary-Search-page-2
+views-exposed-form-locations-panel-pane-1
+views-exposed-form-Glossary-Search-panel-pane-1
+user-login-form');
+  variable_set('compact_forms_stars', 0);
+  variable_set('responsive_menus_css_selectors', '#block-system-main-menu');
+
+  // Ensure the global blocks are properly enabled and configured for the theme.
+  db_update('block')
+    ->fields(array(
+      'status' => 1,
+      'region' => 'secondary_menu_block',
+      'css_class' => '',
+      'title' => '<none>',
+      'weight' => -26,
+    ))
+    ->condition('module', 'locale')
+    ->condition('delta', 'language')
+    ->condition('theme', 'healthdemo')
+    ->execute();
+  watchdog('dfs_dfhc', "Enabled block @blockname", array('@blockname' => 'language'), WATCHDOG_INFO);
+
+  db_update('block')
+    ->fields(array(
+      'status' => 0,
+      'region' => -1,
+    ))
+    ->condition('delta', 'login', '=')
+    ->condition('theme', 'healthdemo', '=')
+    ->execute();
+  watchdog('dfs_dfhc', "Disabled block @blockname", array('@blockname' => 'login'), WATCHDOG_INFO);
+  db_update('block')
+    ->fields(array(
+      'status' => 1,
+      'region' => 'secondary_menu_block',
+      'css_class' => 'secondary-menu site-menu',
+      'title' => '<none>',
+      'weight' => -25,
+    ))
+    ->condition('module', 'system')
+    ->condition('delta', 'user-menu')
+    ->condition('theme', 'healthdemo')
+    ->execute();
+  watchdog('dfs_dfhc', "Enabled block @blockname", array('@blockname' => 'user-menu'), WATCHDOG_INFO);
+
+  db_update('block')
+    ->fields(array(
+      'status' => 1,
+      'region' => 'main_menu_block',
+      'css_class' => 'site-menu main-menu',
+      'title' => '<none>',
+    ))
+    ->condition('module', 'system', '=')
+    ->condition('delta', 'main-menu', '=')
+    ->condition('theme', 'healthdemo', '=')
+    ->execute();
+  watchdog('dfs_dfhc', "Enabled block @blockname", array('@blockname' => 'main-menu'), WATCHDOG_INFO);
+
+  // We need to force panels to save the footer mini panel to the DB to
+  // get around a bug in Panels 3.6 (fixed in 3.7).
+  // See https://www.drupal.org/node/2787113.
+  $mini_panel = panels_mini_load('footer_panel');
+  panels_mini_save($mini_panel);
+  panels_flush_caches();
+
+  db_update('block')
+    ->fields(array(
+      'status' => 1,
+      'region' => 'footer_bottom',
+    ))
+    ->condition('delta', 'footer_panel', '=')
+    ->condition('theme', 'healthdemo', '=')
+    ->execute();
+  watchdog('dfs_dfhc', "Enabled block @blockname", array('@blockname' => 'footer_panel'), WATCHDOG_INFO);
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function dfs_dfhc_uninstall() {
+  // Disable custom theme on uninstall.
+  theme_disable(array('healthdemo'));
+  theme_enable(array('demonstratie_core'));
+  variable_set('theme_default', 'demonstratie_core');
+
+  // Reset site frontpage on uninstall.
+  variable_set('site_frontpage', 'node');
+
+  // Remove custom set variables.
+  variable_del('theme_healthdemo_settings');
+  variable_del('compact_forms_ids');
+  variable_del('compact_forms_stars');
+  variable_del('responsive_menus_css_selectors');
+}

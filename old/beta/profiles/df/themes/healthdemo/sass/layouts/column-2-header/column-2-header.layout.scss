@@ -1,0 +1,99 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 3 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Set breakpoint values.
+$desk : 760px;
+
+@include add-grid(1);
+@include add-grid(12 at $desk);
+
+@include add-gutter(0);
+@include add-gutter(1/4 at $desk);
+
+
+
+$vert-spacing-unit: 15px;
+
+.panel-display--column-2-header {
+  padding-top: 15px;
+  @include pie-clearfix;
+
+  * {
+    @include box-sizing('border-box');
+  }
+}
+
+.column-2-header-region--header,
+.column-2-header-region--sidebar-first,
+.column-2-header-region--sidebar-second {
+  @include float-span(1);
+}
+
+
+
+@include breakpoint($desk, true) {
+  .panel-display--column-2-header {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+  .column-2-header-region--header {
+    @include float-span(12);
+  }
+
+
+  /* Sidebars */
+
+  // Has one sidebar.
+  .column-2-header-has-one-sidebar {
+    // Has the first sidebar.
+    &.column-2-header-has-sidebar-first {
+
+      .column-2-header-region--sidebar-first {
+        @include float-span(4);
+      }
+
+    }
+
+    // Has the second sidebar.
+    &.column-2-header-has-sidebar-second {
+
+
+      .column-2-header-region--header {
+        @include float-span(12);
+      }
+
+      .column-2-header-region--sidebar-second {
+        @include float-span(12);
+      }
+    }
+  }
+
+  // Has two sidebars.
+  .column-2-header-has-two-sidebars {
+
+    .column-2-header-region--header {
+      @include float-span(12);
+
+    }
+
+    .column-2-header-region--sidebar-first {
+//      margin-left: 6%;
+      @include float-span(4, 1);
+    }
+
+
+
+    .column-2-header-region--sidebar-second {
+      @include float-span(8, 5);
+    }
+  }
+}

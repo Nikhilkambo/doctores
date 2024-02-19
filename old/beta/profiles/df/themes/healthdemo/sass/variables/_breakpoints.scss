@@ -1,0 +1,6 @@
+$phone-bp: max-width 449px;
+$between-bp: (min-width 450px) (max-width 850px);
+$tablet-bp:  (min-width 768px) (max-width 1024px);
+$desktop-bp: (min-width 1025px), 'no-query' true;
+$desk-tab-bp: (min-width 768px), 'no-query' true;
+$large-desktop: (min-width 1300px);

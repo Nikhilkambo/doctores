@@ -1,0 +1,59 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 2 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+/**********************************************
+* Grid Setup
+**********************************************/
+.column-2-wcta-region {
+  *zoom: 1;
+  margin-bottom: 15px;
+  height: auto;
+}
+.column-2-wcta-region:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 760px) {
+  .panel-display--column-2-wcta {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+  .column-2-wcta-has-two-sidebars .column-2-wcta-region--sidebar-first {
+    width: 49.15254%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 8.47458%;
+    clear: none;
+  }
+  .column-2-wcta-has-two-sidebars .column-2-wcta-region--sidebar-second {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 59.32203%;
+    clear: none;
+  }
+  .column-2-wcta-has-two-sidebars .column-2-wcta-region--cta {
+    margin-bottom: 0px;
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: both;
+  }
+}
+/**
+*Fix layout for editor screen
+*/
+#content #panels-dnd-main {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0;
+}

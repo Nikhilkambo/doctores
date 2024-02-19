@@ -1,0 +1,298 @@
+
+.panel-display--column-2-complete {
+  padding-top:0px;
+
+  .column-2-complete-region--header {
+
+    section.pane-node-content{
+      margin: 0;
+
+
+
+        article.node-static-page {
+          position: relative;
+          margin:0;
+        }
+        .field-name-field-banner-image {
+          img {
+            display:block;
+            max-width: 100%;
+            max-height: 450px;
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        //overlay
+        .group-overlay {
+          position: absolute;
+          top: 0;
+          left: 64.9%;
+          background: url(../images/tealImage.jpg) no-repeat;
+          background-size: cover;
+          width: 30.9%;
+          height:100%;
+          overflow: hidden;
+
+
+          .field-name-field-banner-title,
+          .field-name-field-banner-text{
+            width: 80%;
+            margin:0 auto;
+          }
+
+          .field-name-field-banner-title {
+            padding-top:5%;
+            font-style:normal;
+            font-weight: bold;
+            font-size: 56px;
+            color:white;
+            line-height: 53px;
+          }
+          .field-name-field-banner-text {
+            padding-top: 20px;
+            font-size: 18px;
+            color: white;
+          }
+
+        }
+
+    }
+
+  }
+  .column-2-complete-region--sidebar-second {
+
+    // body content
+    section.pane-node-content {
+      width:90%;
+      margin:0 auto;
+      margin-top:30px;
+      background-color: #ffffff;
+      box-shadow: -5px -47px 14px -43px lightgrey;
+
+      h2.pane-title {
+        padding-top:30px;
+        padding-left:20px;
+        font-weight: bold;
+        font-size: 56px;
+        color: #069e9b;
+        margin:0;
+        line-height: 56px;
+      }
+      .group-image-body {
+        @include pie-clearfix;
+//        background-color: #ffffff;
+
+        .field-name-body {
+          @include pie-clearfix;
+          padding-left:20px;
+          p {
+            font-size: 18px;
+
+          }
+        }
+
+        .field-name-field-image {
+          float:right;
+          width:37%;
+          padding-left:20px;
+          padding-right:20px;
+        }
+      }
+      .group-reference {
+        @include pie-clearfix;
+        background-color:#F0F0F0;
+        margin-top: 30px;
+
+        .field-name-field-static-page-reference > {
+          .field-items {
+            padding-top:20px;
+          }
+        }
+        .field-name-field-static-page-reference
+          > .field-items
+            > .field-item {
+            box-shadow: -5px -47px 14px -43px lightgrey;
+            height: 455px;
+            text-align: center;
+            width: 32%;
+            float:left;
+            background-color: white;
+            position:relative;
+          article.node-teaser {
+            margin:0;
+            position: static;
+          }
+          h2 {
+            padding-top:10px;
+            padding-bottom: 10px;
+            a {
+              color: #069e9b;
+              font-style: normal;
+            }
+          }
+          .field-name-field-image {
+            position: relative;
+            overflow: hidden;
+            img {
+              display: inline;
+              margin: 0 auto;
+              -webkit-border-radius: 100%;
+              -moz-border-radius: 100%;
+              -ms-border-radius: 100%;
+              -o-border-radius: 100%;
+              border-radius: 100%;
+            }
+          }
+          .field-name-field-banner-text {
+            padding-top:10px;
+            width: 80%;
+            margin:0 auto;
+            font-size: 16px;
+
+          }
+          .field-name-field-banner-button {
+            p {
+              margin:0;
+            }
+            position:absolute;
+            width: 100%;
+            bottom:0;
+
+            a, a:visited {
+              font-size: 1.5em;
+              font-style: italic;
+              display: block;
+              line-height: 50px;
+              @include background-image(linear-gradient(to right, #61257d, #8958a0));
+              box-sizing: border-box;
+              text-align: center;
+              color: white;
+              height: 50px;
+              @include background-image(linear-gradient(to right, #61257d, #8958a0));
+              &:hover, &:active {
+                text-decoration: none;
+                line-height: 42px;
+                background: white;
+                color: #61257e;
+                border: 4px solid #61257d;
+              }
+            }
+          }
+
+
+        }
+        .field-name-field-static-page-reference
+        > .field-items
+        > .field-item.odd {
+          margin-left:2%;
+          margin-right:2%;
+
+        }
+
+      }
+    }
+  }
+
+  .column-2-complete-region--cta {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .panel-display--column-2-complete {
+    .column-2-complete-region--header {
+      section.pane-node-content {
+        .field-name-field-banner-image,
+        .field-name-field-banner-text,
+        .field-name-field-banner-title {
+          display: none;
+        }
+      }
+    }
+
+    .column-2-complete-region--sidebar-second {
+      section.pane-node-content {
+        h2.pane-title {
+          font-size: 28px;
+        }
+      }
+      section.pane-node-content {
+        .group-reference {
+          .field-name-field-static-page-reference
+          > .field-items
+          > .field-item {
+            width: 100%;
+            margin: 10px auto;
+
+            h2 {
+              font-size: 20px;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+@include breakpoint($tablet-bp) {
+    .column-2-complete-region--sidebar-second {
+      section.pane-node-content {
+        .group-reference {
+          .field-name-field-static-page-reference
+          > .field-items
+          > .field-item {
+            h2 {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+
+  .panel-display--column-2-complete {
+    .column-2-complete-region--header {
+      section.pane-node-content {
+        .group-overlay {
+          width: 45%;
+          left: 52%;
+          .field-name-field-banner-title {
+            padding-top: 1%;
+            font-size: 40px;
+            line-height: 40px;
+          }
+          .field-name-field-banner-text {
+            font-size: 16px;
+            line-height: 18px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+@include breakpoint($large-desktop) {
+  .panel-display--column-2-complete {
+    .column-2-complete-region--header {
+      section.pane-node-content {
+        .group-overlay {
+            width: 30%;
+            left: 67%;
+          .field-name-field-banner-title {
+            padding-top: 15%;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+

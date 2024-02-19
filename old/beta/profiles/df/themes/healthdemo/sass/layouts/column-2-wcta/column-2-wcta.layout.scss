@@ -1,0 +1,73 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 2 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+
+// Set breakpoint values.
+$desk : 760px;
+
+/**********************************************
+* Grid Setup
+**********************************************/
+$grids: 1;
+$grids: add-grid(12 at $desk);
+
+$gutters: 0;
+$gutters: add-gutter(1/4 at $desk);
+
+$gutter-styles: 'split';
+
+
+$vert-spacing-unit: 15px;
+
+.column-2-wcta-region {
+  @include pie-clearfix;
+  margin-bottom: $vert-spacing-unit;
+  height: auto;
+}
+
+@include breakpoint($desk, true) {
+
+  .panel-display--column-2-wcta {
+  // max-width: 1200px;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+
+  }
+
+
+
+
+  // Has two sidebars.
+  .column-2-wcta-has-two-sidebars {
+
+    .column-2-wcta-region--sidebar-first {
+      @include grid-span(6, 2);
+    }
+
+    .column-2-wcta-region--sidebar-second {
+      @include grid-span(4, 8);
+    }
+    .column-2-wcta-region--cta {
+      margin-bottom: 0px;
+      @include grid-span(12, 1);
+      clear:both;
+    }
+  }
+
+}
+
+/**
+*Fix layout for editor screen
+*/
+#content #panels-dnd-main {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }

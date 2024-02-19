@@ -1,0 +1,66 @@
+<?php
+
+//Implements hook_form_views_exposed_form_alter.
+
+function doctor_search_exposed_module_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+//  dpm($form);
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-Glossary-Search-page-1' || $form['#id'] == 'views-exposed-form-locations-panel-pane-1'  ) {
+    unset($form['distance']['search_distance']);
+    $options = array(
+      '5' => t('5 miles'),
+      '10' => t('10 miles'),
+      '15' => t('15 miles'),
+      '20' => t('20 miles'),
+      '25' => t('25 miles'),
+    );
+//    $form['combine']['#prefix'] = t('Search');
+    $form['distance']['postal_code']['#title'] = 'Zip Code';
+    $form['distance']['postal_code']['#prefix'] = '<span class="from-text">from</span>';
+    $form['distance']['search_distance'] = array(
+      '#type' => 'select',
+      '#title' => t('Distance'),
+      '#options' => $options,
+      '#weight' => 2,
+      '#validated' => TRUE,
+      '#prefix' => '<div class="sidebar-subcategory">Locations</div>',
+    );
+    $form['distance']['#prefix'] = '<div class="sidebar-category">Filter by</div>';
+
+
+    $form['submit']['#value'] = 'Search';
+  }
+
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-Glossary-Search-page-1') {
+    $form['combine']['#prefix'] = t('Search');
+
+    $form['second_submit']= array(
+      '#type' => 'submit',
+      '#value' => 'Search',
+      '#id' => 'edit-submit-glossary-search',
+      '#access' => TRUE,
+    );
+
+    $form_info_submit['filter-second_submit'] = array(
+      'value' => 'second_submit',
+    );
+
+
+    //Need to place second submit button below location filter.
+    //Weights do not work on form because of BEF module.
+    //Slice up form['#info'], put second submit in correct place.
+    $form_top= $form['#info'];
+    $form_top = array_slice($form_top,0, 2 );
+
+    $form_bottom= $form['#info'];
+    $form_bottom = array_slice($form_bottom, 2 );
+
+    $new_form_info = $form_top + $form_info_submit + $form_bottom;
+
+    $form['#info'] = $new_form_info;
+
+}
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-Glossary-Search-panel-pane-1') {
+    $form['submit']['#value'] = 'Search';
+  }
+
+}

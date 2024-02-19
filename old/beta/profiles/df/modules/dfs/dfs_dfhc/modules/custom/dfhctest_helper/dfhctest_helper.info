@@ -1,0 +1,4 @@
+name = DFHC helper module
+description = Custom module code
+core = 7.x
+package = DFHC Custom

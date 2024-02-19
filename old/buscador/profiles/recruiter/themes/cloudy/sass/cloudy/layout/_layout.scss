@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+}
+
+body.slim-mode {
+  &.node-type-job-per-template {
+    padding: 1em;
+  }
+  &.node-type-job-per-link, &.note-type-job-per-file {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.pane-recruiter-wizard-add-links .action-links {
+  margin-top: 0;
+}

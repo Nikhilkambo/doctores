@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC locations feature.
+ */
+
+include_once 'dfhc_locations.features.inc';

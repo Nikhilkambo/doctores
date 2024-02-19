@@ -1,0 +1,132 @@
+
+
+
+section.location-view-exposed {
+  margin:0;
+  background-color: white;
+  h2 {
+    font-style: normal;
+    padding-top: 25px;
+    text-align: center;
+  }
+  .views-exposed-form {
+    padding-left:10px;
+    padding-bottom: 10px;
+
+    //By default all exposed filters are floated left.
+    .views-exposed-widget {
+      padding-top: 20px;
+      float: none;
+      input {
+        border:1px solid lightgrey;
+        font-size: 16px;
+        color: #5f6d76;
+      }
+
+
+      //Make title of exposed widgets darker.
+      > label {
+        color: #333333;
+      }
+    }
+
+    .views-widget-filter-name {
+      label {
+        display: block;
+      }
+      .views-widget {
+        font-size: 18px;
+        color: #069e9b;
+        font-weight: bold;
+      }
+      .form-item-keys {
+        margin-top:5px;
+      }
+      input {
+        line-height:30px;
+        padding-left:10px;
+        width: 80%;
+        height: 30px;
+      }
+    }
+
+    //Distance search items
+    .views-widget-filter-distance {
+      @include pie-clearfix;
+
+      .sidebar-category {
+        font-size: 18px;
+        color: #069e9b;
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+      .sidebar-subcategory {
+        font-size: 16px;
+        color: #333333;
+        font-weight: bold;
+        padding-bottom:10px;
+      }
+
+      .form-item-distance-search-distance {
+        float:left;
+
+        select {
+          padding-left: 10px;
+          box-sizing: border-box;
+          height: 30px;
+          border: 1px solid lightgrey;
+          color: #5f6d76;
+        }
+      }
+
+      .from-text {
+        margin-top:10px;
+        padding-left:10px;
+        padding-right:10px;
+        float:left;
+      }
+      .form-item-distance-postal-code {
+        float:left;
+        width: 35%;
+        input {
+          line-height:30px;
+          padding-left:10px;
+          height: 30px;
+        }
+      }
+
+      //Hide search unit dropdown. Default miles.
+      .form-item-distance-search-units {
+        display: none;
+      }
+
+    }
+
+    //Search Buttons
+    .views-submit-button,
+    .views-widget-filter-second_submit {
+      padding-top:25px;
+      input {
+        @extend button;
+        width: 180px;
+        height: 50px;
+        font-weight:bold;
+      }
+    }
+
+
+    .form-item-field-locations-target-id {
+    }
+
+    .form-item-field-specialties-tid {
+    }
+
+    .views-widget-filter-field_language_spoken_tid {
+    }
+
+    .form-item-field-gender-tid {
+    }
+
+
+  }
+}

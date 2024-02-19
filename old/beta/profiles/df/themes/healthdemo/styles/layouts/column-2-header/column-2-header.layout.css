@@ -1,0 +1,85 @@
+/*******************************************************************************
+ * columns.layout.scss
+ *
+ * Styling of the 3 column layout demonstrating the golden rule and asymmetric
+ * grids with Singularity.
+ ******************************************************************************/
+.panel-display--column-2-header {
+  padding-top: 15px;
+  *zoom: 1;
+}
+.panel-display--column-2-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.panel-display--column-2-header * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.column-2-header-region--header,
+.column-2-header-region--sidebar-first,
+.column-2-header-region--sidebar-second {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+
+@media (min-width: 760px) {
+  .panel-display--column-2-header {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+
+  .column-2-header-region--header {
+    width: 100%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* Sidebars */
+  .column-2-header-has-one-sidebar.column-2-header-has-sidebar-first .column-2-header-region--sidebar-first {
+    width: 32.20339%;
+    clear: right;
+    float: left;
+    margin-left: 0;
+    margin-right: 1.69492%;
+  }
+  .column-2-header-has-one-sidebar.column-2-header-has-sidebar-second .column-2-header-region--header {
+    width: 100%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+  .column-2-header-has-one-sidebar.column-2-header-has-sidebar-second .column-2-header-region--sidebar-second {
+    width: 100%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+
+  .column-2-header-has-two-sidebars .column-2-header-region--header {
+    width: 100%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+  .column-2-header-has-two-sidebars .column-2-header-region--sidebar-first {
+    width: 32.20339%;
+    clear: right;
+    float: left;
+    margin-left: 0;
+    margin-right: 1.69492%;
+  }
+  .column-2-header-has-two-sidebars .column-2-header-region--sidebar-second {
+    width: 66.10169%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+}

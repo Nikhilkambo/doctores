@@ -1,0 +1,126 @@
+.pond-header,
+.panel-display--column-2-header,
+.panel-display--column-2-complete{
+  padding-top:0px;
+
+  .pond-header-inner,
+  .column-2-header-region--header,
+  .column-2-complete-region--header{
+
+    section.pane-patients-and-visitors-header,
+    section.pane-location-view-header,
+    section.pane-doctor-search-header,
+    section.pane-conditions-search-header{
+      margin: 0;
+      .panels-flexible-region {
+        width:100%;
+      }
+
+      section.pane-custom {
+        position:relative;
+        margin: 0;
+
+        p {
+          margin: 0;
+        }
+        //overlay
+        .view-header-overlay {
+          position: absolute;
+          top: 0;
+          left: 64.9%;
+          background: url(../images/tealImage.jpg) no-repeat;
+          background-size: cover;
+          width: 30.9%;
+          height:100%;
+          overflow:hidden;
+
+          h1,
+          p{
+            width: 80%;
+            margin:0 auto;
+          }
+          h1 {
+            padding-top:5%;
+            font-style:normal;
+            line-height:53px;
+          }
+          p {
+            line-height:18px;
+            padding-top: 3%;
+          }
+
+        }
+
+        img {
+          display:block;
+          max-width: 100%;
+          height: auto;
+          width: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+@include breakpoint($tablet-bp) {
+  .pond-header,
+  .panel-display--column-2-header,
+  .panel-display--column-2-complete{
+
+    .pond-header-inner,
+    .column-2-header-region--header,
+    .column-2-complete-region--header{
+
+      section.pane-patients-and-visitors-header,
+      section.pane-location-view-header,
+      section.pane-doctor-search-header,
+      section.pane-conditions-search-header{
+        section.pane-custom {
+          .view-header-overlay {
+            width:45%;
+            left:52%;
+            h1 {
+              padding-top:1%;
+              font-size:40px;
+              line-height:40px;
+            }
+            p {
+            font-size: 16px;
+            line-height: 18px;
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
+@include breakpoint($large-desktop) {
+  .pond-header,
+  .panel-display--column-2-header,
+  .panel-display--column-2-complete {
+
+    .pond-header-inner,
+    .column-2-header-region--header,
+    .column-2-complete-region--header {
+
+      section.pane-patients-and-visitors-header,
+      section.pane-location-view-header,
+      section.pane-doctor-search-header,
+      section.pane-conditions-search-header {
+        section.pane-custom {
+          .view-header-overlay {
+            width: 30%;
+            left: 67%;
+            h1 {
+              padding-top: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

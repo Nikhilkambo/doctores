@@ -1,0 +1,76 @@
+//*********************************
+//* Colors
+//*********************************
+$blue:              #005a97;
+$dark-blue:         #005086;
+$light-blue:        #0d9edb;
+$light-grey:        #f2f2f2;
+$green:             #2ba4a2;
+// Color
+$drkblue: $green;
+$lightblue: #4ac2cf;
+$orange: #e36d25;
+$darkgrey: #8d8d8d;
+$lightgrey: #F4F5F6;
+$whitetext: #FFF;
+
+
+//*********************************
+//* Background Colors
+//*********************************
+$bg-header-main:    $blue;
+$bg-header-menu:    $dark-blue;
+$bg-main:           #FFF;
+$bg-footer-top:     #FFF;
+$bg-footer-middle:  #00aeea;
+$bg-footer-bottom:  #015b9a;
+
+$bg-html:           $bg-footer-bottom;
+$bg-blocks:         #f4f4f4;
+$pane-border-red:   #ef2c3c;
+$pane-border-yellow:#ffcb05;
+$pane-border-purple:#7f418e;
+$pane-border-blue:  $light-blue;
+$pane-border-grey:  #cccccc;
+$pane-border-orange:#ffab55;
+$pane-border-light-purple: #a75dc3;
+
+//*********************************
+//* Font Colors
+//*********************************
+$body-font-color:   #333333;
+$header-font-color: #FFF;
+$footer-font-color: #FFF;
+
+$block-title-color: $light-blue;
+
+$link-color:        #005A92;
+$link-hover-color:  #00B4E8;
+$header-link-color: $link-hover-color;
+$header-link-hover-color: $link-color;
+
+//*********************************
+//* Form Colors
+//*********************************
+$form-border:       #d8d8d8;
+$form-text:         #333333;
+
+//*********************************
+//* Button Colors
+//*********************************
+$btn-light-blue:    $light-blue;
+$btn-blue:          $blue;
+$btn-orange:        #f68c20;
+$btn-purple:        #74368b;
+
+//*********************************
+//* Menu Colors
+//*********************************
+$bg-menu-dropdown:  $dark-blue;
+$bg-menu-quicklink: $light-blue;
+$bg-menu-hover:     #00aeea;
+$border-menu-item:  #006da5;
+$mega-menu-hover:   #fdc800;
+$mega-menu-feature: #0c9edb;
+$mega-menu-border:  #1a6ba2;
+$border-menu-item-ql:#3bb4e5;

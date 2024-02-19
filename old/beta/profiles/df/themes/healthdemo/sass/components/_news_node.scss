@@ -1,0 +1,19 @@
+/* ---  News node page--- */
+.node-patient-story {
+  .image-and-address {
+    float: right;
+    width: 33%;
+    margin-left: 1em;
+    font: 17px Helvetica Neue medium, sans-serif;
+    color: $drkblue;
+    padding-bottom: 3%;
+    margin-right:40px;
+
+  }
+  .field-name-body {
+    padding-left:20px;
+    p {
+      font-size:18px;
+    }
+  }
+}

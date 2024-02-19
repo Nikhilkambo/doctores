@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DFHC patient story feature.
+ */
+
+include_once 'dfhc_patient_story.features.inc';

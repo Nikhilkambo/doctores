@@ -1,0 +1,105 @@
+//////Locations view
+
+.view-locations {
+margin-right: 5%;
+
+
+  .views-row {
+    border-bottom: 1px solid  #5f6d76;
+    padding-top:20px;
+   @include pie-clearfix;
+    .views-field {
+      @include pie-clearfix;
+    }
+    .field-content {
+    }
+    .views-field-title {
+      float:left;
+      width:75%;
+      @include pie-clearfix;
+      font-style: normal;
+      a {
+
+        color: #069e9b;
+      }
+    }
+    .views-field-field-er-wait-time {
+      padding-top:20px;
+      font-size: 18px;
+      color: #61257d;
+    }
+
+    .views-field-field-image {
+      float:left;
+      width: 26%;
+      padding-bottom:20px;
+      padding-top:20px;
+      @include pie-clearfix;
+
+    }
+    .views-field-nothing-1 {
+      font-size: 16px;
+      color: #5f6d76;
+      font-weight:bold;
+      padding-top:20px;
+      padding-left:20px;
+      float:left;
+      width: 34%;
+      @include pie-clearfix;
+
+      .distance-field {
+        font-weight:normal;
+        padding-top:7px;
+      }
+      .phone-fax {
+        margin-top:-10px;
+        font-size: 16px;
+        font-weight:normal;
+      }
+    }
+    .views-field-field-address {
+      padding-top:20px;
+      width:30%;
+      float:left;
+//     padding-left:10px;
+      clear: right;
+    }
+
+
+  }
+  .views-row-last {
+    border: none;
+  }
+}
+
+@include breakpoint($tablet-bp) {
+
+  .view-locations {
+    .views-row {
+      .views-field-title {
+        h2 {
+          font-size: 20px;
+        }
+      }
+      .views-field-field-er-wait-time {
+        font-size: 16px;
+      }
+      .views-field-nothing-1 {
+        font-size: 14px;
+        .distance-field {
+          font-size: 14px;
+        }
+        .phone-fax {
+          font-size: 14px;
+        }
+
+      }
+      .views-field-field-address {
+        .gmap-gmap {
+          width: 255px !important;
+          height: 152px !important;
+        }
+      }
+    }
+  }
+}

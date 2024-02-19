@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Obsolete helper methods.  Remove this file once upgrade is complete.
+ */
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * This function helps remove duplicated added to views from the
+ * location module.
+ */
+function dfhctest_helper_views_pre_render(&$view) {
+  $used_nids = array();
+  $new_view_result = array();
+  if ($view->name == 'glossary' && $view->is_attachment == FALSE) {
+    foreach ($view->result as $row) {
+      if (!in_array($row->nid, $used_nids)) {
+        $new_view_result[] = $row;
+        $used_nids[] = $row->nid;
+      }
+    }
+    $view->result = $new_view_result;
+  }
+}
+
+/**
+ * Implement Hook menu alter.
+ */
+function dfhctest_helper_menu_alter(&$items) {
+//  $items['user']['access callback'] = 'user_is_anonymous';
+}
+

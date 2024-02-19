@@ -1,0 +1,64 @@
+//*********************************
+//* Fonts
+//*********************************
+@import "compass/css3/font-face";
+
+//*
+// This CSS resource incorporates links to font software which is the valuable copyrighted
+// property of Monotype and/or its suppliers. You may not attempt to copy, install,
+// redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+// with any questions regarding Web Fonts:  http://www.linotype.com
+//
+
+$open-sans-family: 'Open Sans',Arial,sans-serif;
+$vag-font-family: 'VAG Rounded W01 Thin';
+$vag-font-family-bold: 'VAG Rounded W01 Bold';
+$body-font-family: $open-sans-family;
+
+$base-font-family: Hevetica Neue, 'Open Sans', Ubuntu, Verdana, Arial, sans-serif;
+$font-light: Hevetica Neue, 'Open Sans', Ubuntu, Verdana, Arial, sans-serif;
+$helvetica-medium: 'Helvetica Neue Medium', 'Open Sans', Ubuntu, Verdana, Arial, sans-serif;
+$helvetica-bold: 'Helvetica Neue Bold', 'Open Sans', Ubuntu, Verdana, Arial, sans-serif;
+$helvetica-roman: 'Helvetica Neue Roman', 'Open Sans', Ubuntu, Verdana, Arial, sans-serif;
+
+// Color
+$drkblue: #145f84;
+$lightblue: #4ac2cf;
+$orange: #e36d25;
+$darkgrey: #8d8d8d;
+$lightgrey: #F4F5F6;
+
+// General
+$color-menu: #111;
+$border-color: #d8d6d6;
+
+// Background
+$color-background: #fff;
+$color-background-alternate: #e8e8e8;
+$color-background-reverse: #000;
+
+// Text colors
+$color-text: #8a8b8b;
+$color-text-reverse: #ededed;
+
+// Headers
+$color-header: $drkblue;
+$color-header-reverse: #bffbff;
+
+// Link colors
+$link-base: $lightblue;
+$link-visited: $lightblue;
+$link-hover: darken($link-base, 20);
+$link-more-base: $drkblue;
+$link-more-hover: darken($link-more-base, 20);
+;
+$link-more-background-base: #fff;
+$link-more-background-hover: #fff;
+
+// Border colors
+$color-border: lighten($color-text, 40);
+
+// Form colors
+$color-input-background: #fff;
+$color-placeholder: lighten($color-text, 40);
+$buttons: (default, #fefefe) (active, #f3f3f3, true) (primary, #272b38) (primary-active, #272b38, true) (call-to-action, rgb(180, 65, 65));

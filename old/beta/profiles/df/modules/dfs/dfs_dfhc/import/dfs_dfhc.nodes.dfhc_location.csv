@@ -1,0 +1,41 @@
+Title,Body,Image,Name,Street,Additional,City,Province,Postal_Code,Email,Phone,Fax,Cta,WaitTime,Created
+"Del Mar Medical Center","Del Mar Medical Center provides expert primary care services for the whole family, from infants to grandparents. With our convenient location in the Del Mar community and San Diego county, our newly renovated facility is home to experienced doctors from diverse backgrounds.
+
+At our office, you benefit from:
+
+Primary care experts including pediatrics
+On-site specialty services, including cardiology, HIV medicine, rheumatology, travel medicine, sports medicine and wound care
+On-site lab and X-ray services
+On-call doctor available 24/7
+Free underground parking with validation
+Free Wi-Fi",del-mar-medical.jpg,"Del Mar","862 Del Mar Downs Rd",#3,"Solana Beach",Ca,92075,general@delmarmedical.org,(858)555-5900,(858)555-5999,"Cta 1",10,
+"East County General Hospital","For over 30 years, the East County General Hospital has been serving the people of San Diego County with the utmost care. East County General and its skilled staff offer a variety of programs and services designed to provide convenience to busy families and keep patients feeling their best including:
+
+Same-day or next-day primary care appointments when you're not feeling well
+
+Urgent care centers open daily, no referral required
+
+After-hours pediatric appointments to ensure your children are taken care of day or night, including weekends and holidays
+
+Saturday physicals clinic for ages 12 to 18 who need a physical for school, camp, or sports
+
+Secure electronic medical records that allow your entire care team to access and update your health information
+
+A variety of health education classes, including weight management programs and nutrition and fitness classes
+
+Acceptance of most health insurance plans, payment methods, and provider networks",east-county.jpg,"El Cajon","566 Clifton St",#100,"El Cajon",Ca,92020,general@eastcounty.org,(619)555-8000,(619)555-9000,"Cta 1",40,
+"Southern California Hospital","The team at Southern California Hospital aims to provide high-tech, cutting-edge health care for our patients. As dedicated members of the community we serve, these patients are also our neighbors, families, and friends. Each person we treat receives personalized care using the latest technology and advanced procedures.
+
+It's our goal to improve overall wellness for our neighbors through care, education, and proactive screening. We help patients improve their health to prevent illness and live longer, happier lives.",southern-california.jpg,"Pacific Beach","700 Missouri St",,"San Diego",Ca,92109,general@southcahospital.org,(619)555-4422,(619)555-2020,"Cta 1",20,
+"La Jolla Center for Health and Wellness","At the La Jolla Center for Health and Wellness, our goal is to provide our patients with friendly, professional care. Our staff of expert physicians offer you superior healthcare to meet all of your medical needs.
+
+When you come to the La Jolla Center for Health and Wellness, we want you to feel comfortable and welcome. To achieve this, we knew we wanted to provide a healthcare experience. We train our staff to provide great healthcare and great service. Our staff is personable and we provide a family-friendly facility featuring a modern caf_, open courtyards with plenty of seating, free WiFi, and a children's playground.
+
+We take pride in serving the local La Jolla community, the San Diego County, and patients from around the country. ",la-jolla-center.jpg,"La Jolla","10901 N Torrey Pines Rd",,"San Diego",Ca,92121,general@lajollahealth.org,(858)555-5150,(858)555-3030,"Cta 1",0,
+"San Diego Medical Center","At the San Diego Medical Center, we aspire to promote the health of you and your loved ones. Whether you are coming in for a general check-up or special treatment, you can trust that you will be in great hands. Our world-renowned staff is able to provide the care you need in state-of-the-art facilities. We offer you extensive medical care as well as unbeatable psychiatric therapy for your physical and emotional health needs. We work around the clock to ensure that you receive attention quickly and are served with the utmost hospitality.
+
+We have been serving the residents of San Diego County for 37 years from our convenient, central location. Our patients are confident in our services and know that we are never too far. Lying in the heart of San Diego, we are easy to find and always accommodating.
+
+The San Diego Medical Center offers many services and treatments, including Allergy and Immunology treatment, Child Care, Cancer treatment, and Physical Therapy. Our welcoming facilities include a Fitness Center, Pharmacy, several caf_s and eateries, as well as an open courtyard.
+
+If you aren't able to see us in person, feel free to contact us at our 24-hour medical hotline.",sd-medical-center.jpg,"Downtown San Diego","1301 Park Blvd",,"San Diego",Ca,92101,sdmc@sandiegomedical.org,(619)555-5050,(619)555-7878,"Cta 1",15,
